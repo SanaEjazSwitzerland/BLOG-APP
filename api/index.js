@@ -15,7 +15,7 @@ const verifyToken = require('./middleware/verifyToken'); // import the middlewar
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'sdughwougbwlgbdg';
-
+//const apiURL ='' 
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(cookieParser());

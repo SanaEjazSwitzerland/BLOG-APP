@@ -4,10 +4,12 @@ import { useContext,useEffect } from 'react';
 import { UserContext } from '../UserContext';
 
 
+
 const Header = () => {
+  // console.log(process.env.REACT_APP_SITE_URL)
   const{setUserInfo, userInfo}=  useContext(UserContext);
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch(process.env.REACT_APP_SITE_URL+'/profile', {
       credentials: 'include',
     }).then(response =>{
       response.json().then(userInfo => {
@@ -23,7 +25,7 @@ function logout(){
   //   method: 'POST'
   // })
   // setUserInfo(null);
-  fetch('http://localhost:4000/logout', {
+  fetch(process.env.REACT_APP_SITE_URL+'/logout', {
     credentials: 'include',
     method: 'POST'
   }).then(() => {

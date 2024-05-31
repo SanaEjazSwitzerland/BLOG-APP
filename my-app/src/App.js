@@ -10,6 +10,7 @@ import { UserContextProvider } from './UserContext';
 import CreatePost from './Pages/CreatePost';
 import PostPage from './Pages/PostPage';
 import EditPost from './Pages/EditPost';
+// import 'dotenv/config'
 
 function App() {
   return (
